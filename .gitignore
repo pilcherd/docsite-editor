@@ -1,0 +1,9 @@
+node_modules/
+client/dist/
+*.tgz
+coverage/
+release/
+.docsite-editor/
+.env
+.env.*
+!.env.example

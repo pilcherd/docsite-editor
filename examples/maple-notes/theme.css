@@ -1,0 +1,42 @@
+:root {
+  --ifm-color-primary: #32745c;
+  --ifm-color-primary-dark: #2b654f;
+  --ifm-color-primary-darker: #265c48;
+  --ifm-color-primary-darkest: #1d4738;
+  --ifm-color-primary-light: #41866c;
+  --ifm-color-primary-lighter: #4d9479;
+  --ifm-color-primary-lightest: #68ad92;
+  --ifm-heading-color: #23352d;
+  --ifm-font-family-base: system-ui, sans-serif;
+}
+.markdown h1 {
+  font-size: 2.2rem;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+.markdown h2 {
+  font-size: 1.5rem;
+  margin-top: 1.8rem;
+}
+.example-caption {
+  color: #64756d;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.example-callout {
+  background: #edf6f0;
+  border-left: 3px solid #32745c;
+  padding: 1rem;
+}
+.example-figure {
+  margin: 1.2rem 0;
+}
+.example-figure img {
+  display: block;
+  border-radius: 8px;
+}
+.example-figure figcaption {
+  color: #64756d;
+  font-size: 0.85rem;
+  margin-top: 0.4rem;
+}

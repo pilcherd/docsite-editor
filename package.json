@@ -1,0 +1,100 @@
+{
+  "name": "@pilcherd/docsite-editor",
+  "version": "1.0.0",
+  "description": "WYSIWYG site editor plugin for use with Docusaurus",
+  "license": "MIT",
+  "main": "index.cjs",
+  "bin": {
+    "docsite-editor": "bin/editor.cjs"
+  },
+  "files": [
+    "index.cjs",
+    "bin",
+    "lib",
+    "client",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.txt",
+    "CHANGELOG.md",
+    "TRADEMARKS.md",
+    "docs/screenshots"
+  ],
+  "scripts": {
+    "build": "node scripts/build.cjs",
+    "test": "node --test test/*.test.cjs",
+    "prepack": "npm run build",
+    "test:corpus": "node scripts/test-corpus.cjs",
+    "test:site": "node scripts/test-site.cjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "npm run format:check && npm run build && npm test && npm run check:release",
+    "check:release": "node scripts/check-release.cjs",
+    "release:snapshot": "node scripts/release-snapshot.cjs",
+    "demo": "node bin/editor.cjs --site examples/maple-notes --built --port 3012"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "peerDependencies": {
+    "@docusaurus/core": ">=3.5 <4",
+    "react": ">=18 <20",
+    "react-dom": ">=18 <20"
+  },
+  "dependencies": {
+    "@babel/parser": "7.28.5",
+    "@babel/traverse": "7.28.5",
+    "@mdx-js/mdx": "3.1.1",
+    "@tiptap/core": "3.34.0",
+    "@tiptap/extension-highlight": "3.34.0",
+    "@tiptap/extension-image": "3.34.0",
+    "@tiptap/extension-subscript": "3.34.0",
+    "@tiptap/extension-superscript": "3.34.0",
+    "@tiptap/extension-table": "3.34.0",
+    "@tiptap/extension-text-align": "3.34.0",
+    "@tiptap/extension-text-style": "3.34.0",
+    "@tiptap/html": "3.34.0",
+    "@tiptap/pm": "3.34.0",
+    "@tiptap/react": "3.34.0",
+    "@tiptap/starter-kit": "3.34.0",
+    "esbuild": "0.27.0",
+    "express": "5.1.0",
+    "hast-util-to-html": "9.0.5",
+    "js-yaml": "4.3.2",
+    "mdast-util-to-hast": "13.2.2",
+    "picomatch": "4.0.7",
+    "postcss": "8.5.33",
+    "remark-directive": "4.0.0",
+    "remark-gfm": "4.0.1",
+    "remark-mdx": "3.1.1",
+    "remark-parse": "11.0.0",
+    "remark-stringify": "11.0.0",
+    "turndown": "7.2.2",
+    "turndown-plugin-gfm": "1.0.2",
+    "unified": "11.0.5"
+  },
+  "devDependencies": {
+    "@docusaurus/core": "3.10.2",
+    "@docusaurus/preset-classic": "3.10.2",
+    "jsdom": "27.2.0",
+    "prettier": "3.6.2",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "keywords": [
+    "docusaurus",
+    "docusaurus-plugin",
+    "documentation",
+    "wysiwyg",
+    "markdown",
+    "mdx",
+    "local-first"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pilcherd/docsite-editor.git"
+  },
+  "homepage": "https://github.com/pilcherd/docsite-editor#readme",
+  "bugs": {
+    "url": "https://github.com/pilcherd/docsite-editor/issues"
+  }
+}
